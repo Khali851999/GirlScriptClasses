@@ -1,6 +1,7 @@
 //preprocessor directives
 #include<iostream>
 #define pi 3.14
+#define int float
 using namespace std;
 class complex{
     public:
