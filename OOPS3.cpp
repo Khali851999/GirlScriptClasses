@@ -71,7 +71,9 @@ int main(){
    Child c;
    c.haircolor = 0;
 
+/*
 
+Exceptipon handling
    int a ,b;
    cin>>a>>b;
 
@@ -92,6 +94,9 @@ int main(){
        int c = b/a;
        cout<<c<<endl;
     }
+    */
+
+    cout<<INT_MIN<<" "<<INT_MAX<<endl;
 
     return 0;
 }
