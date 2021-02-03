@@ -1,15 +1,18 @@
 #include<iostream>
 using namespace std;
+
 class base{
     public:
     int a;
-    void print(){
+    virtual void print(){
         cout<<"base"<<a<<endl;
     }
+    
 };
 class derived: public base{
     public:
     int b;
+    //string::npos
     void print(){
         cout<<"derived"<<b<<endl;
     }
@@ -33,12 +36,15 @@ int main(){
     
     base* b = &d2;
     b->print();
-    //object instance
+    //int b = 10;
+    //int* a = &b;
+    //object(lhs) instance(rhs)
+    //base* b = &d;
     /*
-    ******non-virtual (base), virtual (derived)*******
-    1. BB -> normal
-    2. BD -> non-virtual (base), virtual (derived)
-    3. DD -> normal
-    4. DB X
+    ****** non-virtual (lhs/object/ptr), virtual (rhs/instance/reference) *******
+    1. Base-Base -> normal ex:[base b2;  base* b = &b2;]
+    2. Base-Derived -> non-virtual (base), virtual (derived) ex:[derived d2; base b3 = &d2]
+    3. Derived-Derived -> normal
+    4. Derived-Base X
     */
 }
