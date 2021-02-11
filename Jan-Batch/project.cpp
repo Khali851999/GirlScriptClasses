@@ -14,9 +14,6 @@ class User
     public:
     //map<long,float> mp;
 
-
-
-
     void openAccount()
     {
         cout<<"Enter name\n";
